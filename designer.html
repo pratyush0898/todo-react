@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input:focus, select:focus, button:focus {
+            border-color: #999;
+            outline: none;
+        }
+
+        input[type="file"] {
+            padding: 3px;
+        }
+
+        input[type="password"] {
+            position: relative;
+            padding-right: 40px; /* Adjust space for the eye icon */
+        }
+
+        input[type="password"] + .toggle-password {
+            position: absolute;
+            right: 20px;
+            top: 35px;
+            cursor: pointer;
+        }
+
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            display: flex;
+        }
+
+        .dropdown select {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .helper-text {
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Username">
+        
+        <label for="website">Website</label>
+        <input type="url" id="website" name="website" placeholder="http://yoursite.com">
+        
+        <label for="search">Search</label>
+        <input type="text" id="search" name="search" placeholder="Search...">
+        
+        <label for="amount">Amount</label>
+        <div class="dropdown">
+            <input type="number" id="amount" name="amount" placeholder="0.00">
+            <select id="currency" name="currency">
+                <option value="USD">USD</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        
+        <label for="file">Upload File</label>
+        <input type="file" id="file" name="file">
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Your password">
+        <span class="eye-icon" onclick="togglePasswordVisibility()">👁️</span>
+        <p class="helper-text">Must be at least 8 characters</p>
+        
+        <label for="phone">Phone Number</label>
+        <div class="dropdown">
+            <select id="country-code" name="country-code">
+                <option value="US">US +1</option>
+                <!-- Add more country codes as needed -->
+            </select>
+            <input type="tel" id="phone" name="phone" placeholder="Phone number">
+        </div>
+    </form>
+
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('password');
+            var eyeIcon = document.querySelector('.eye-icon');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.textContent = '👁️‍🗨️'; // Change icon if needed
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.textContent = '👁️';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    width: 300px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus, select:focus, button:focus {
+    border-color: #999;
+    outline: none;
+}
+
+input[type="file"] {
+    padding: 3px;
+}
+
+input[type="password"] {
+    position: relative;
+    padding-right: 40px; /* Adjust space for the eye icon */
+}
+
+input[type="password"] + .toggle-password {
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    cursor: pointer;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: flex;
+}
+
+.dropdown select {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.helper-text {
+    font-size: 12px;
+    color: #666;
+}

@@ -1,0 +1,144 @@
+#body {
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f7;
+    overflow: hidden;
+}
+
+#todo {
+    border-radius: 15px;
+    height: 88dvh;
+    width: 55%;
+    padding: 9px;
+    background: #e0f0ff;
+}
+
+#todo-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.svg {
+    height: 44px;
+    width: auto;
+}
+
+#main {
+    padding: 9px;
+}
+
+#heading {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#border {
+    border: 0.5px solid rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    height: 333px; /* Ensure a fixed height */
+    overflow: hidden; /* Hide overflow from the border element */
+}
+
+#task-lists {
+    overflow-y: scroll;
+    height: 100%; /* Make it take full height of the parent (#border) */
+    padding: 12px;
+}
+
+#task-lists li {
+    display: flex;
+    justify-content: space-between;
+}
+
+#task-lists li #inttex {
+    display: flex;
+}
+
+#task-lists li #inttex input {
+    margin-right: 5px;
+}
+
+#task-lists li #inttex span {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+#task-lists li #icons button {
+    padding: 7px 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 17.2px;
+    color: #f0f8ff;
+    background: rgb(91 33 182);
+    margin-left: 12px;
+    height: 33px;
+    /* background-color: transparent;
+    background: -moz-linear-gradient(129deg, rgba(28,28,52,1) 0%, rgba(106,71,151,1) 26%, rgba(106,71,151,1) 43%, rgba(101,102,120,1) 65%, rgba(100,107,115,1) 66%, rgba(92,128,97,1) 75%, rgba(92,151,71,1) 81%, rgba(74,217,24,1) 93%, rgba(67,255,0,1) 100%);
+    background: -webkit-linear-gradient(129deg, rgba(28,28,52,1) 0%, rgba(106,71,151,1) 26%, rgba(106,71,151,1) 43%, rgba(101,102,120,1) 65%, rgba(100,107,115,1) 66%, rgba(92,128,97,1) 75%, rgba(92,151,71,1) 81%, rgba(74,217,24,1) 93%, rgba(67,255,0,1) 100%);
+    background: linear-gradient(129deg, rgba(28,28,52,1) 0%, rgba(106,71,151,1) 26%, rgba(106,71,151,1) 43%, rgba(101,102,120,1) 65%, rgba(100,107,115,1) 66%, rgba(92,128,97,1) 75%, rgba(92,151,71,1) 81%, rgba(74,217,24,1) 93%, rgba(67,255,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1c34", endColorstr="#43ff00", GradientType=1); */
+}
+
+#task-lists li #icons {
+    display: flex;
+}
+
+#tasks #new input {
+    width: 240px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#tasks #new button {
+    padding: 10px 24px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 17.2px;
+    color: #f0f8ff;
+    background: rgb(91 33 182);
+    /* background-color: transparent;
+    background: -moz-linear-gradient(129deg, rgba(28,28,52,1) 0%, rgba(106,71,151,1) 26%, rgba(106,71,151,1) 43%, rgba(101,102,120,1) 65%, rgba(100,107,115,1) 66%, rgba(92,128,97,1) 75%, rgba(92,151,71,1) 81%, rgba(74,217,24,1) 93%, rgba(67,255,0,1) 100%);
+    background: -webkit-linear-gradient(129deg, rgba(28,28,52,1) 0%, rgba(106,71,151,1) 26%, rgba(106,71,151,1) 43%, rgba(101,102,120,1) 65%, rgba(100,107,115,1) 66%, rgba(92,128,97,1) 75%, rgba(92,151,71,1) 81%, rgba(74,217,24,1) 93%, rgba(67,255,0,1) 100%);
+    background: linear-gradient(129deg, rgba(28,28,52,1) 0%, rgba(106,71,151,1) 26%, rgba(106,71,151,1) 43%, rgba(101,102,120,1) 65%, rgba(100,107,115,1) 66%, rgba(92,128,97,1) 75%, rgba(92,151,71,1) 81%, rgba(74,217,24,1) 93%, rgba(67,255,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1c34", endColorstr="#43ff00", GradientType=1); */
+    margin-left: 24px;
+}
+
+#new {
+    margin-top: -4px;
+    margin-left: 24%;
+    margin-bottom: -28px;
+}
+
+#done {
+    padding: 1px;
+    margin-bottom: 9px;
+}
+#done input {
+    margin-right: 9px;
+}
+
+#done span {
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #0e0e0e;
+}
+
+#text {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 500;
+}
